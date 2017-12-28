@@ -12,4 +12,5 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//* require drag-and-drop
 //= require_tree .

@@ -16,7 +16,7 @@
 
 
  body {
-   background-color: #659D32;
+   background-color: gray;
  }
 
  .flex-row {
@@ -115,4 +115,14 @@
 
  .c-set3 {
    margin-top: 400px;
+ }
+
+ .guest-name {
+   border: 1px solid black;
+   background-color: rebeccapurple;
+   color: white;
+   padding: 15px;
+   font-size: 18px;
+   width: 100px;
+   margin-bottom: 10px;
  }
