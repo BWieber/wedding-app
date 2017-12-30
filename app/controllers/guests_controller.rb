@@ -1,9 +1,11 @@
 class GuestsController < ApplicationController
   before_action :set_guest, only: [:show, :edit, :update, :destroy]
 
+
   # GET /guests
   # GET /guests.json
   def index
+    @a_room = ["one", "two", "three", "four"]
     @guests = Guest.all
   end
 

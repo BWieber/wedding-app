@@ -126,3 +126,15 @@
    width: 100px;
    margin-bottom: 10px;
  }
+
+ .guest-list {
+   position: fixed;
+   right: 0;
+   top: 0;
+   width: 200px;
+   height: 400px;
+   overflow: auto;
+   border: 5px solid black;
+   background-color: white;
+   padding: 25px;
+ }

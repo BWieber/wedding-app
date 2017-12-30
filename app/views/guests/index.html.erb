@@ -12,21 +12,13 @@
     <div class="center-text"> BANQUET HALL </div>
   </div>
 
-  <div class="room-rectangle orient-center">
-    <div class="center-text"> A4 </div>
-  </div>
+  <%= @a_room.each_index do |idx| %>
 
-  <div class="room-rectangle orient-center">
-    <div class="center-text"> A3 </div>
-  </div>
+    <div id="<%= idx+1 %>" ondrop="drop_handler(event);" ondragover="dragover_handler(event);" class="room-rectangle orient-center">
+      <div class="center-text"> A<%= idx+1 %> </div>
+    </div>
 
-  <div class="room-rectangle orient-center">
-    <div class="center-text"> A2 </div>
-  </div>
-
-  <div class="room-rectangle orient-center">
-    <div class="center-text"> A1 </div>
-  </div>
+  <% end %>
 
 </div>
 
@@ -183,22 +175,25 @@
 </div>
 
 
-<p id="notice"><%= notice %></p>
+<div class="guest-list">
 
-<h1>Guests</h1>
+  <p id="notice"><%= notice %></p>
 
-<div class="flex-column">
+  <h1>Guests</h1>
 
-  <% @guests.each do |guest| %>
+  <div class="flex-column">
 
-    <span id='<%= guest.name%>' draggable="true" ondragstart="dragstart_handler(event);"  class="guest-name">
-      <%= guest.name %>
-    </span>
+    <% @guests.each do |guest| %>
 
-  <% end %>
+      <span id='<%= guest.name%>' draggable="true" ondragstart="dragstart_handler(event);"  class="guest-name">
+        <%= guest.name %>
+      </span>
 
+    <% end %>
+
+  </div>
+
+  <br>
+
+  <%= link_to 'New Guest', new_guest_path %>
 </div>
-
-<br>
-
-<%= link_to 'New Guest', new_guest_path %>
